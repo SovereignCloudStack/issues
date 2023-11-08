@@ -1,10 +1,93 @@
 ---
-name: Bug report
-about: Create a report to help us improve
-title: "[BUG]"
+name: Bug Report
+description: Create a bug report to help us improving
+title: "[Bug]: "
 labels: bug
-assignees: ''
-
+assignees:
+body:
+- type: dropdown
+    id: version
+    attributes:
+      label: SCS Release Version
+      description: What version of SCS are you running?
+      options:
+        - R5 (default)
+        - R4
+        - R3
+        - R2
+        - R1
+        - R0
+      default: 0
+    validations:
+      required: true
+- type: textarea
+    id: environment
+    attributes:
+      label: How does your environment look like?
+      description: Hardware, Operating System, etc
+      value: ""
+    validations:
+      required: true
+- type: textarea
+    id: what-you-do
+    attributes:
+      label: What were you doing when the bug occured?
+      value: ""
+    validations:
+      required: true
+- type: textarea
+    id: what-you-expect
+    attributes:
+      label: What were you expecting to happen?
+      value: ""
+    validations:
+      required: true
+- type: textarea
+    id: what-happened
+    attributes:
+      label: What did happen?
+      value: ""
+    validations:
+      required: true
+- type: dropdown
+    id: done-before
+    attributes:
+      label: Did it work before and did you change something?
+      options:
+        - Yes
+        - No
+    validations:
+      required: true
+- type: textarea
+    id: what-change
+    attributes:
+      label: When Yes - What did change?
+      value: ""
+    validations:
+      required: false
+- type: dropdown
+    id: reproduce
+    attributes:
+      label: Is the bug reproducable?
+      options:
+        - Occasionally
+        - Reliably
+- type: textarea
+    id: reproduce-how
+    attributes:
+      label: How to reproduce it?
+    validations:
+        required: false
+- type: textarea
+    id: analysis
+    attributes:
+      label: Did you do any analysis/experiments on the bug yet and have results?
+    validations:
+        required: false
+- type: textarea
+    id: fix-it
+    attributes:
+      label: Did you fix it already? When yes, how?
+    validations:
+        required: false
 ---
-
-
