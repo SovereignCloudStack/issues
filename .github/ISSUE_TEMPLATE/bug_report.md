@@ -2,10 +2,10 @@
 name: Bug Report
 description: Create a bug report to help us improving
 title: "[Bug]: "
-labels: bug
-assignees:
+labels: ["bug"]
+assignees: ""
 body:
-- type: dropdown
+  - type: dropdown
     id: version
     attributes:
       label: SCS Release Version
@@ -20,7 +20,7 @@ body:
       default: 0
     validations:
       required: true
-- type: textarea
+  - type: textarea
     id: environment
     attributes:
       label: How does your environment look like?
@@ -28,28 +28,28 @@ body:
       value: ""
     validations:
       required: true
-- type: textarea
+  - type: textarea
     id: what-you-do
     attributes:
       label: What were you doing when the bug occured?
       value: ""
     validations:
       required: true
-- type: textarea
+  - type: textarea
     id: what-you-expect
     attributes:
       label: What were you expecting to happen?
       value: ""
     validations:
       required: true
-- type: textarea
+  - type: textarea
     id: what-happened
     attributes:
       label: What did happen?
       value: ""
     validations:
       required: true
-- type: dropdown
+  - type: dropdown
     id: done-before
     attributes:
       label: Did it work before and did you change something?
@@ -58,36 +58,36 @@ body:
         - No
     validations:
       required: true
-- type: textarea
+  - type: textarea
     id: what-change
     attributes:
       label: When Yes - What did change?
       value: ""
     validations:
       required: false
-- type: dropdown
+  - type: dropdown
     id: reproduce
     attributes:
       label: Is the bug reproducable?
       options:
         - Occasionally
         - Reliably
-- type: textarea
+  - type: textarea
     id: reproduce-how
     attributes:
       label: How to reproduce it?
     validations:
-        required: false
-- type: textarea
+      required: false
+  - type: textarea
     id: analysis
     attributes:
       label: Did you do any analysis/experiments on the bug yet and have results?
     validations:
-        required: false
-- type: textarea
+      required: false
+  - type: textarea
     id: fix-it
     attributes:
       label: Did you fix it already? When yes, how?
     validations:
-        required: false
+      required: false
 ---
